@@ -5,8 +5,14 @@
 
 .row {
   display: flex;
-  flex: 0 1 auto;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -198,12 +204,10 @@
 
   .start-lg {
     justify-content: flex-start;
-    text-align: start;
   }
 
   .center-lg {
     justify-content: center;
-    text-align: center;
   }
 
   .end-lg {

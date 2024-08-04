@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* -----ROOT----- */
+:root {
+  --font-family: "Quicksand", sans-serif;
+  --general-font-size: 1rem;
+  --main-heading-font-size: 4.5rem;
+  --heading-font-size: 2rem;
+  --heading-color: #222222;
+  --paragraph-color: #666666;
+  --yellow-bg: #fbce00;
+  --blue-btn-color: #0896ff;
+  --white-color: #ffffff;
+}
+/* -----ROOT----- */
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: var(--main-heading-font-size);
+  font-weight: 500;
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--heading-font-size);
+  color: var(--heading-color);
+}
+
+p {
+  font-size: var(--general-font-size);
+  color: var(--paragraph-color);
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+  font-weight: 500;
+  color: inherit;
+}
+
+.container1 {
+  width: 80%;
+  margin: auto;
+}
+
+.container2 {
+  width: 95%;
+  margin: auto;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* -----Border Under Links------ */
+.link-border {
+  position: relative;
+  padding-bottom: 1px;
+}
+.link-border:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.5px;
+  background-color: var(--white-color);
+  transition: width 0.3s ease;
+}
+.link-border:hover:after {
+  width: 100%;
+}
+/* -----Border Under Links------ */
+
+/* -----Main Classes----- */
+
+/* Header */
+.header {
+  background: url(../images/The-amazing-Fira-of-Santorini.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  color: var(--white-color) !important;
+}
+
+.header p {
+  color: var(--white-color) !important;
+}
+
+.header:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: transparent;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.navigation {
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.header > .home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.home-content {
+  animation: fadeInFromTop 1.5s ease-out;
+}
+
+.vertical-line {
+  border-left: 1px solid var(--white-color);
+  height: 100px;
+  animation: verticalLineExpand 1s ease-out forwards;
+}
+
+.tours-btn {
+  padding: 10px 70px;
+  border: 1px solid var(--white-color);
+  transform: translate(0, 50%);
+  transition: all 200ms ease-in;
+}
+
+.tours-btn:hover {
+  background-color: var(--yellow-bg);
+  border-color: var(--yellow-bg);
+}
