@@ -13,7 +13,9 @@
   --font-family: "Quicksand", sans-serif;
   --general-font-size: 1rem;
   --main-heading-font-size: 4.5rem;
+  --mobile-main-heading-font-size: 3rem;
   --heading-font-size: 2rem;
+  --mobile-heading-font-size: 1.3rem;
   --heading-color: #222222;
   --paragraph-color: #666666;
   --yellow-bg: #fbce00;
@@ -21,6 +23,7 @@
   --white-color: #ffffff;
 }
 /* -----ROOT----- */
+
 html {
   overflow-x: hidden;
 }
@@ -28,47 +31,41 @@ body {
   font-family: var(--font-family);
   line-height: 1.8;
 }
-
 h1 {
   font-size: var(--main-heading-font-size);
   font-weight: 500;
   line-height: 1;
 }
-
 h2 {
   font-size: var(--heading-font-size);
   color: var(--heading-color);
 }
-
 p {
   font-size: var(--general-font-size);
   color: var(--paragraph-color);
   font-weight: 500;
 }
-
 a {
   cursor: pointer;
   font-weight: 500;
   color: inherit;
 }
-/* -------General Classes-------- */
 
-.upper-case {
-  text-transform: uppercase;
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: var(--mobile-main-heading-font-size);
+  }
+  h2 {
+    font-size: var(--mobile-heading-font-sizeheading-font-size);
+  }
 }
 
-.inline-block {
-  display: inline-block;
-}
-
-.text-center {
-  text-align: center;
-}
+/* ------------General Classes------------ */
+/* ***Containers*** */
 .container1 {
   width: 1200px;
   margin: auto;
 }
-
 .container2 {
   width: 95%;
   margin: auto;
@@ -78,47 +75,40 @@ a {
   .container1 {
     width: 90%;
   }
-
-  /* .container2 {
-    width: 95%;
-  } */
 }
-
 /* For Large Phone and Portrait  */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
   .container1 {
     width: 90%;
   }
-
-  /* .container2 {
-    width: 95%;
-  } */
 }
-
 /* For Landscape and Tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container1 {
     width: 750px;
   }
-
-  /* .container2 {
-    width: 95%;
-  } */
 }
-
 /* Large Devices such as Desktop */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container1 {
     width: 950px;
   }
-
-  .container2 {
-    width: 95%;
-  }
 }
+/* ***End-Containers*** */
 
-/* Components */
-/* -----Border Under Links------ */
+.upper-case {
+  text-transform: uppercase;
+}
+.inline-block {
+  display: inline-block;
+}
+.text-center {
+  text-align: center;
+}
+/* ------------End-General Classes------------ */
+
+/* ------------Components------------ */
+/* ***Border Under Links*** */
 .link-border {
   position: relative;
   padding-bottom: 1px;
@@ -136,9 +126,9 @@ a {
 .link-border:hover:after {
   width: 100%;
 }
-/* -----Border Under Links------ */
+/* ***End-Border Under Links*** */
 
-/* ---------- HAM MENU ICON--------- */
+/* ***HAM MENU ICON*** */
 .ham-menu {
   cursor: pointer;
   display: block;
@@ -174,11 +164,11 @@ a {
   top: 12px;
   transform: rotate(45deg) translate(10px, -5px);
 }
-/* ---------- HAM MENU ICON --------- */
+/* ***End-HAM MENU ICON*** */
+/* ------------End-Components------------ */
 
-/* -----Main Classes----- */
-
-/* ---------Header------------ */
+/* Main Classes */
+/* ------------Header------------ */
 .header {
   background: url(../images/The-amazing-Fira-of-Santorini.jpg);
   background-repeat: no-repeat;
@@ -188,11 +178,9 @@ a {
   position: relative;
   color: var(--white-color) !important;
 }
-
 .header p {
   color: var(--white-color) !important;
 }
-
 .header:before {
   content: " ";
   position: absolute;
@@ -203,7 +191,8 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
-/* ---------Navigation-------- */
+
+/* ***Navigation*** */
 .nav-bar {
   width: 100%;
   background-color: transparent;
@@ -212,22 +201,16 @@ a {
   position: relative;
   z-index: 2;
 }
-
 .nav-item {
   display: inline-block;
   margin-left: 2rem;
   position: relative;
   z-index: 3;
 }
-
 .ham-menu {
   display: none;
 }
-/* For Mobile  */
-@media only screen and (max-width: 600px) {
-  .home {
-    padding-top: 5rem;
-  }
+@media only screen and (max-width: 767px) {
   .navigation {
     display: none;
   }
@@ -235,17 +218,7 @@ a {
     display: inline-block;
   }
 }
-
-/* For Large Phone and Portrait  */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-  .navigation {
-    display: none;
-  }
-  .ham-menu {
-    display: inline-block;
-  }
-}
-/* ---------Navigation-------- */
+/* ***End-Navigation*** */
 
 .header > .home {
   position: absolute;
@@ -256,26 +229,28 @@ a {
   z-index: 1;
   padding-top: 8rem;
 }
-
 .home-content {
   animation: fadeInFromTop 1.5s ease-out;
 }
-
 .vertical-line {
   border-left: 1px solid var(--white-color);
   height: 100px;
   animation: verticalLineExpand 1s ease-out forwards;
 }
-
 .tours-btn {
   padding: 10px 70px;
   border: 1px solid var(--white-color);
   transform: translate(0, 50%);
   transition: all 200ms ease-in;
 }
-
 .tours-btn:hover {
   background-color: var(--yellow-bg);
   border-color: var(--yellow-bg);
 }
-/* ---------Header------------ */
+/* For Mobile  */
+@media only screen and (max-width: 600px) {
+  .tours-btn {
+    padding: 10px 40px;
+  }
+}
+/* ---------End-Header------------ */
