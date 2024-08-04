@@ -21,7 +21,9 @@
   --white-color: #ffffff;
 }
 /* -----ROOT----- */
-
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: var(--font-family);
   line-height: 1.8;
@@ -49,16 +51,7 @@ a {
   font-weight: 500;
   color: inherit;
 }
-
-.container1 {
-  width: 80%;
-  margin: auto;
-}
-
-.container2 {
-  width: 95%;
-  margin: auto;
-}
+/* -------General Classes-------- */
 
 .upper-case {
   text-transform: uppercase;
@@ -71,7 +64,60 @@ a {
 .text-center {
   text-align: center;
 }
+.container1 {
+  width: 1200px;
+  margin: auto;
+}
 
+.container2 {
+  width: 95%;
+  margin: auto;
+}
+/* For Mobile  */
+@media only screen and (max-width: 600px) {
+  .container1 {
+    width: 90%;
+  }
+
+  /* .container2 {
+    width: 95%;
+  } */
+}
+
+/* For Large Phone and Portrait  */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .container1 {
+    width: 90%;
+  }
+
+  /* .container2 {
+    width: 95%;
+  } */
+}
+
+/* For Landscape and Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container1 {
+    width: 750px;
+  }
+
+  /* .container2 {
+    width: 95%;
+  } */
+}
+
+/* Large Devices such as Desktop */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container1 {
+    width: 950px;
+  }
+
+  .container2 {
+    width: 95%;
+  }
+}
+
+/* Components */
 /* -----Border Under Links------ */
 .link-border {
   position: relative;
@@ -92,9 +138,47 @@ a {
 }
 /* -----Border Under Links------ */
 
+/* ---------- HAM MENU ICON--------- */
+.ham-menu {
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+.bar {
+  background-color: var(--white-color);
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: 0.4s;
+  width: 24px;
+}
+.bar1 {
+  top: 4px;
+}
+.bar2 {
+  top: 11px;
+}
+.bar3 {
+  top: 18px;
+}
+.ham-menu:active .bar1 {
+  top: 12px;
+  transform: rotate(-45deg) translate(5px, 10px);
+}
+.ham-menu:active .bar2 {
+  opacity: 0;
+}
+.ham-menu:active .bar3 {
+  top: 12px;
+  transform: rotate(45deg) translate(10px, -5px);
+}
+/* ---------- HAM MENU ICON --------- */
+
 /* -----Main Classes----- */
 
-/* Header */
+/* ---------Header------------ */
 .header {
   background: url(../images/The-amazing-Fira-of-Santorini.jpg);
   background-repeat: no-repeat;
@@ -119,7 +203,7 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
-
+/* ---------Navigation-------- */
 .nav-bar {
   width: 100%;
   background-color: transparent;
@@ -129,15 +213,39 @@ a {
   z-index: 2;
 }
 
-.navigation {
-  display: flex;
-}
-
 .nav-item {
+  display: inline-block;
   margin-left: 2rem;
   position: relative;
   z-index: 3;
 }
+
+.ham-menu {
+  display: none;
+}
+/* For Mobile  */
+@media only screen and (max-width: 600px) {
+  .home {
+    padding-top: 5rem;
+  }
+  .navigation {
+    display: none;
+  }
+  .ham-menu {
+    display: inline-block;
+  }
+}
+
+/* For Large Phone and Portrait  */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+  .ham-menu {
+    display: inline-block;
+  }
+}
+/* ---------Navigation-------- */
 
 .header > .home {
   position: absolute;
@@ -146,6 +254,7 @@ a {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
+  padding-top: 8rem;
 }
 
 .home-content {
@@ -169,3 +278,4 @@ a {
   background-color: var(--yellow-bg);
   border-color: var(--yellow-bg);
 }
+/* ---------Header------------ */
