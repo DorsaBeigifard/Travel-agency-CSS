@@ -11,7 +11,7 @@
 /* -----ROOT----- */
 :root {
   --font-family: "Quicksand", sans-serif;
-  --general-font-size: 1rem;
+  --general-font-size: 0.938rem;
   --main-heading-font-size: 4.5rem;
   --mobile-main-heading-font-size: 3rem;
   --heading-font-size: 2rem;
@@ -31,14 +31,25 @@ body {
   font-family: var(--font-family);
   line-height: 1.8;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: var(--heading-color);
+}
 h1 {
   font-size: var(--main-heading-font-size);
-  font-weight: 500;
   line-height: 1;
+  color: var(--white-color);
 }
 h2 {
   font-size: var(--heading-font-size);
-  color: var(--heading-color);
+}
+h3 {
+  font-size: 1.4rem;
 }
 p {
   font-size: var(--general-font-size);
@@ -105,6 +116,10 @@ a {
 .text-center {
   text-align: center;
 }
+
+.section-spacing {
+  padding: 3.2rem 0;
+}
 /* ------------End-General Classes------------ */
 
 /* ------------Components------------ */
@@ -167,7 +182,6 @@ a {
 /* ***End-HAM MENU ICON*** */
 /* ------------End-Components------------ */
 
-/* Main Classes */
 /* ------------Header------------ */
 .header {
   background: url(../images/The-amazing-Fira-of-Santorini.jpg);
@@ -254,3 +268,13 @@ a {
   }
 }
 /* ---------End-Header------------ */
+
+/* ---------About------------ */
+.about-item {
+  padding: 0 1.8rem;
+}
+.about-item img {
+  width: 64px;
+  height: 64px;
+}
+/* ---------End-About------------ */
