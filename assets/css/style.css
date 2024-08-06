@@ -54,7 +54,7 @@ h2 {
 }
 h3 {
   font-size: 1.4rem;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 p {
@@ -323,6 +323,8 @@ a {
   }
 }
 /* ---------End-Places Content------------ */
+
+/* ---------Popular Destinations------------ */
 .overview {
   animation: fadeIn 1.8s ease-in-out;
   position: relative;
@@ -335,7 +337,6 @@ a {
   object-fit: contain;
   border-radius: 3px;
 }
-
 .destination-overlay {
   background-color: var(--blue-bg);
   position: absolute;
@@ -352,12 +353,16 @@ a {
   background-clip: content-box;
   border-radius: 3px;
 }
-
 .destination-overlay h3,
 .destination-overlay a {
   color: white !important;
 }
-
 .overview:hover > .destination-overlay {
   opacity: 0.9;
 }
+@media screen and (max-width: 767px) {
+  a {
+    font-size: 0.7rem;
+  }
+}
+/* ---------End-Popular Destinations------------ */
