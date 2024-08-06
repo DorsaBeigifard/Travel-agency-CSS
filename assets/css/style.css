@@ -15,12 +15,14 @@
   --main-heading-font-size: 4.5rem;
   --mobile-main-heading-font-size: 3rem;
   --heading-font-size: 2rem;
-  --mobile-heading-font-size: 1.3rem;
+  --mobile-heading-font-size: 1.4rem;
   --heading-color: #222222;
   --paragraph-color: #666666;
   --yellow-bg: #fbce00;
+  --grey-bg: #efefef;
   --blue-btn-color: #0896ff;
   --white-color: #ffffff;
+  --spacing: 1rem;
 }
 /* -----ROOT----- */
 
@@ -47,6 +49,7 @@ h1 {
 }
 h2 {
   font-size: var(--heading-font-size);
+  line-height: 1.5;
 }
 h3 {
   font-size: 1.4rem;
@@ -69,7 +72,7 @@ a {
     font-size: var(--mobile-main-heading-font-size);
   }
   h2 {
-    font-size: var(--mobile-heading-font-sizeheading-font-size);
+    font-size: var(--mobile-heading-font-size);
   }
   h3 {
     font-size: 1.125rem;
@@ -78,35 +81,32 @@ a {
 
 /* ------------General Classes------------ */
 /* ***Containers*** */
-.container1 {
+.container {
   width: 1200px;
   margin: auto;
 }
-.container2 {
-  width: 95%;
-  margin: auto;
-}
+
 /* For Mobile  */
 @media only screen and (max-width: 600px) {
-  .container1 {
+  .container {
     width: 90%;
   }
 }
 /* For Large Phone and Portrait  */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  .container1 {
+  .container {
     width: 90%;
   }
 }
 /* For Landscape and Tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .container1 {
+  .container {
     width: 700px;
   }
 }
 /* Large Devices such as Desktop */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .container1 {
+  .container {
     width: 950px;
   }
 }
@@ -123,7 +123,7 @@ a {
 }
 
 .section-spacing {
-  padding: 3.2rem 0;
+  padding: calc(var(--spacing) * 4) 0;
 }
 /* ------------End-General Classes------------ */
 
@@ -281,7 +281,7 @@ a {
 .about-item img {
   width: 60px;
   height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: calc(var(--spacing) / 2);
 }
 /* For mobile */
 @media only screen and (max-width: 768px) {
@@ -290,7 +290,7 @@ a {
   }
   .about-item {
     padding: 0 0.9rem;
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--spacing) * 2);
   }
   .about-item img {
     width: 32px;
@@ -298,3 +298,15 @@ a {
   }
 }
 /* ---------End-About------------ */
+
+/* ---------Places Content------------ */
+.about-place {
+  background-color: var(--grey-bg);
+  padding: var(--spacing) 2.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .about-place {
+    padding: calc(var(--spacing) * 3) 1.5rem;
+  }
+}
+/* ---------End-Places Content------------ */
