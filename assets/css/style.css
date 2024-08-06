@@ -50,6 +50,8 @@ h2 {
 }
 h3 {
   font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 p {
   font-size: var(--general-font-size);
@@ -62,12 +64,15 @@ a {
   color: inherit;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: var(--mobile-main-heading-font-size);
   }
   h2 {
     font-size: var(--mobile-heading-font-sizeheading-font-size);
+  }
+  h3 {
+    font-size: 1.125rem;
   }
 }
 
@@ -96,7 +101,7 @@ a {
 /* For Landscape and Tablets */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container1 {
-    width: 750px;
+    width: 700px;
   }
 }
 /* Large Devices such as Desktop */
@@ -217,14 +222,14 @@ a {
 }
 .nav-item {
   display: inline-block;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   position: relative;
   z-index: 3;
 }
 .ham-menu {
   display: none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .navigation {
     display: none;
   }
@@ -271,10 +276,35 @@ a {
 
 /* ---------About------------ */
 .about-item {
-  padding: 0 1.8rem;
+  padding: 0 1.2rem;
 }
 .about-item img {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
+/* For Mobile  */
+@media only screen and (max-width: 600px) {
+  // Change Styles
+}
+
+/* For Large Phone and Portrait  */
+@media only screen and (max-width: 768px) {
+  .about-content {
+    flex-wrap: wrap;
+  }
+  .about-item {
+    padding: 0 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .about-item img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* For Landscape and Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
 /* ---------End-About------------ */
