@@ -283,12 +283,7 @@ a {
   height: 60px;
   margin-bottom: 10px;
 }
-/* For Mobile  */
-@media only screen and (max-width: 600px) {
-  // Change Styles
-}
-
-/* For Large Phone and Portrait  */
+/* For mobile */
 @media only screen and (max-width: 768px) {
   .about-content {
     flex-wrap: wrap;
@@ -302,9 +297,4 @@ a {
     height: 32px;
   }
 }
-
-/* For Landscape and Tablets */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-
 /* ---------End-About------------ */
