@@ -21,7 +21,8 @@
   --yellow-bg: #fbce00;
   --grey-bg: #efefef;
   --blue-bg: #4c89cf;
-  --blue-btn-color: #0896ff;
+  --blue-btn-color: #4483cd;
+  --form-text-color: #01357f;
   --white-color: #ffffff;
   --spacing: 1rem;
 }
@@ -133,6 +134,10 @@ a {
 
 .margin-top {
   margin-top: calc(var(--spacing) * 2);
+}
+
+.margin-bottom {
+  margin-bottom: calc(var(--spacing) * 1.5);
 }
 
 /* ------------End-General Classes------------ */
@@ -363,7 +368,7 @@ a {
   opacity: 0;
   background-clip: content-box;
 }
-.destination-overlay *{
+.destination-overlay * {
   color: var(--white-color);
 }
 .overview:hover > .destination-overlay {
@@ -377,7 +382,77 @@ a {
 /* ---------End-Popular Destinations------------ */
 
 /* ---------Amsterdam------------ */
-.amsterdam-content *{
+.amsterdam-content * {
   color: var(--white-color);
 }
 /* ---------End-Amsterdam------------ */
+
+/* ---------Find Deals------------ */
+.find-deals {
+  background-color: var(--yellow-bg);
+}
+.find-deals-content * {
+  color: var(--form-text-color);
+}
+.find-deals-content h2 {
+  font-size: 1.2rem;
+}
+/* Form Styling */
+.form-text {
+  position: relative;
+}
+.form-text input[type="text"] {
+  width: 100%;
+  padding: var(--spacing);
+  padding-left: 55px;
+  border: none;
+  font-size: var(--general-font-size);
+}
+.form-text img {
+  position: absolute;
+  width: 25px;
+  height: auto;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-dates {
+  gap: 0.3rem;
+}
+.form-date {
+  position: relative;
+}
+.form-date label {
+  position: absolute;
+  font-size: 0.7rem;
+  left: 5px;
+  font-weight: bold;
+}
+.form-date input[type="date"] {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.deal-form button {
+  background-color: var(--blue-btn-color);
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px -5px rgba(62,121,189,1);
+  cursor: pointer;
+}
+.form-footer img{
+  height: 25px;
+  width: auto;
+  
+}
+/* ---------End-Find Deals------------ */
