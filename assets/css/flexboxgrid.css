@@ -26,6 +26,11 @@
   flex-direction: column-reverse;
 }
 
+[class^="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media screen and (max-width: 767px) {
   .col-md {
     flex-grow: 1;

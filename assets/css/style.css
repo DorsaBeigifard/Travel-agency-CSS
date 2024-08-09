@@ -140,6 +140,10 @@ a {
   margin-bottom: calc(var(--spacing) * 1.5);
 }
 
+.col-padding{
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /* ------------End-General Classes------------ */
 
 /* ------------Components------------ */
@@ -329,6 +333,9 @@ a {
 /* ---------End-About------------ */
 
 /* ---------Places Content------------ */
+.place [class^="col-"] {
+  padding: 0;
+}
 .about-place {
   background-color: var(--grey-bg);
   padding: var(--spacing) 2.5rem;
@@ -344,8 +351,8 @@ a {
 .overview {
   animation: fadeIn 1.8s ease-in-out;
   position: relative;
-  padding: var(--spacing);
   overflow: hidden;
+
 }
 .overview img {
   width: 100%;
@@ -453,6 +460,5 @@ a {
 .form-footer img{
   height: 25px;
   width: auto;
-  
 }
 /* ---------End-Find Deals------------ */
