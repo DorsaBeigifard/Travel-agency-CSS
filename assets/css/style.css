@@ -195,6 +195,17 @@ a {
   transform: rotate(45deg) translate(10px, -5px);
 }
 /* ***End-HAM MENU ICON*** */
+
+/* ***Parallax** */
+.parallax {
+  background-image: url(../images/amsterdam.jpg);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed;
+}
+/* ***End-Parallax*** */
+
 /* ------------End-Components------------ */
 
 /* ------------Header------------ */
@@ -351,11 +362,9 @@ a {
   transition: all 0.4s ease-out;
   opacity: 0;
   background-clip: content-box;
-  border-radius: 3px;
 }
-.destination-overlay h3,
-.destination-overlay a {
-  color: white !important;
+.destination-overlay *{
+  color: var(--white-color);
 }
 .overview:hover > .destination-overlay {
   opacity: 0.9;
@@ -366,3 +375,9 @@ a {
   }
 }
 /* ---------End-Popular Destinations------------ */
+
+/* ---------Amsterdam------------ */
+.amsterdam-content *{
+  color: var(--white-color);
+}
+/* ---------End-Amsterdam------------ */
