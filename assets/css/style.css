@@ -560,9 +560,9 @@ a {
   background-color: var(--blue-btn-color);
   color: var(--white-color);
 }
-@media screen and (max-width: 1199px){
-  .more-btn{
-    position:initial;
+@media screen and (max-width: 1199px) {
+  .more-btn {
+    position: initial;
   }
 }
 @media screen and (max-width: 767px) {
@@ -575,18 +575,53 @@ a {
 /* ------------End-News------------ */
 
 /* ------------Footer------------ */
-.footer-links{
-  font-size: calc(var(--general-font-size)*0.94);
+.footer-links {
+  font-size: calc(var(--general-font-size) * 0.94);
 }
-
-.footer .link-border::after{
+.footer .link-border::after {
   background-color: var(--yellow-bg);
 }
-
-.footer-col h4{
+.footer-col h4 {
   margin-bottom: 10px;
 }
-
-.footer-about{
-  margin-top: calc(var(--spacing)*4);
+.footer-about {
+  margin-top: calc(var(--spacing) * 4);
 }
+.socials li:not(:first-of-type) {
+  margin-left: 2rem;
+}
+.fa-facebook {
+  color: #1977f2;
+}
+.fa-x-twitter {
+  color: #54aced;
+}
+
+.fa-instagram {
+  color: #3e729a;
+}
+.fa-youtube {
+  color: #e52d27;
+}
+/* For Desktop and Tablets */
+@media only screen and (min-width: 600px) {
+  .footer-links .col-lg-3 {
+    flex-basis: 20%;
+    max-width: 20%;
+  }
+}
+
+/* For hiding footer and only displayin "..." for more info */
+/* .footer-more {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .footer-col{
+    display: none;
+  }
+  .footer-more{
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+  }
+} */
