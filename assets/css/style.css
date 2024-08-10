@@ -337,8 +337,8 @@ a {
 /* ---------End-About------------ */
 
 /* ---------Places Content------------ */
-.place [class^="col-"] {
-  padding: 0;
+.place{
+  animation: var(--load-animation) 1.5s;
 }
 .about-place {
   background-color: var(--grey-bg);
