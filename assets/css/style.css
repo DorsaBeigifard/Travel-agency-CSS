@@ -609,6 +609,11 @@ a {
   color: #e52d27;
 }
 /* For Desktop and Tablets */
+@media only screen and (max-width: 7670px) {
+.footer-links{
+  font-size: 0.8rem;
+}
+}
 @media only screen and (min-width: 600px) {
   .footer-links .col-lg-3 {
     flex-basis: 20%;
