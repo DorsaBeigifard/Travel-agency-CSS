@@ -7,6 +7,9 @@
   flex-direction: row;
 }
 
+.gap{
+  gap: 1rem;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -26,10 +29,10 @@
   flex-direction: column-reverse;
 }
 
-[class^="col-"] {
+/* [class^="col-"] {
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 @media screen and (max-width: 767px) {
   .col-md {
