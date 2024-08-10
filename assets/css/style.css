@@ -29,9 +29,6 @@
 }
 /* -----ROOT----- */
 
-html {
-  overflow-x: hidden;
-}
 body {
   font-family: var(--font-family);
   line-height: 1.8;
@@ -68,6 +65,7 @@ a {
   cursor: pointer;
   font-weight: 500;
   color: inherit;
+  transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1120px) {
@@ -276,6 +274,12 @@ a {
 .slider-content {
   animation: fadeInFromTop 1.5s ease-out;
 }
+.heading-text{
+  transition: all 0.3s ease-in-out;
+}
+.heading-text:hover {
+  text-shadow: 4px 4px 12px rgba(251,206,0,0.79);
+}
 .vertical-line {
   border-left: 1px solid var(--white-color);
   height: 100px;
@@ -285,7 +289,6 @@ a {
   padding: 10px 70px;
   border: 1px solid var(--white-color);
   transform: translate(0, 50%);
-  transition: all 200ms ease-in;
 }
 .tours-btn:hover {
   background-color: var(--yellow-bg);
@@ -475,9 +478,6 @@ a {
 .news-text p {
   margin-bottom: 5px;
 }
-.news-text a {
-  transition: all 0.3s;
-}
 .news-text a:hover {
   color: var(--blue-bg);
 }
@@ -514,7 +514,6 @@ a {
   padding-bottom: 1.5rem;
   background-clip: content-box;
 }
-
 .image-overlay img {
   position: absolute;
   top: 50%;
@@ -525,15 +524,12 @@ a {
   z-index: 2;
   transition: opacity 0.3s ease;
 }
-
 .news-image:hover:after {
   opacity: 0.7;
 }
-
 .news-image:hover .image-overlay img {
   opacity: 1;
 }
-
 .news-content .col-lg-4 {
   flex-basis: calc(33.33333333% - 1rem);
   max-width: calc(33.33333333% - 1rem);
@@ -551,7 +547,6 @@ a {
   right: 0;
   border-radius: var(--radius);
 }
-
 .more-btn::after {
   content: "»";
   margin-left: 10px;
@@ -571,7 +566,6 @@ a {
     max-width: calc(100% - 1rem);
   }
 }
-
 /* ------------End-News------------ */
 
 /* ------------Footer------------ */
@@ -596,7 +590,6 @@ a {
 .fa-x-twitter {
   color: #54aced;
 }
-
 .fa-instagram {
   color: #3e729a;
 }
@@ -625,3 +618,6 @@ a {
     font-size: 2rem;
   }
 } */
+
+/* ------------End-Footer------------ */
+
