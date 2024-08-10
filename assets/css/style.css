@@ -380,7 +380,7 @@ a {
   opacity: 0.9;
 }
 @media screen and (max-width: 767px) {
-  a {
+  .destinations a {
     font-size: 0.7rem;
   }
   .destinations .col-md-6 {
@@ -571,8 +571,11 @@ a {
 }
 @media screen and (max-width: 767px) {
   .news-content .col-md-12 {
-    flex-basis: calc(100% - 1rem);
-    max-width: calc(100% - 1rem);
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .news .gap{
+    row-gap: 1rem;
   }
 }
 /* ------------End-News------------ */
