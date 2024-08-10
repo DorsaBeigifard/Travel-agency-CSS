@@ -131,18 +131,11 @@ a {
 .section-spacing {
   padding: calc(var(--spacing) * 4) 0;
 }
-
 .margin-top {
   margin-top: calc(var(--spacing) * 2);
 }
-
 .margin-bottom {
   margin-bottom: calc(var(--spacing) * 1.5);
-}
-
-.col-padding{
-  padding-left: 15px;
-  padding-right: 15px;
 }
 /* ------------End-General Classes------------ */
 
@@ -350,13 +343,12 @@ a {
 /* ---------Popular Destinations------------ */
 .destinations .col-lg-3 {
   flex-basis: calc(25% - 1rem);
-  max-width:calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
 }
 .overview {
   animation: fadeIn 1.8s ease-in-out;
   position: relative;
   overflow: hidden;
-
 }
 .overview img {
   width: 100%;
@@ -389,7 +381,7 @@ a {
   }
   .destinations .col-md-6 {
     flex-basis: calc(50% - 1rem);
-    max-width:calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 }
 /* ---------End-Popular Destinations------------ */
@@ -460,10 +452,10 @@ a {
   border: none;
   padding: 0.5rem 1.1rem;
   border-radius: 6px;
-  box-shadow: 2px 2px 12px -5px rgba(62,121,189,1);
+  box-shadow: 2px 2px 12px -5px rgba(62, 121, 189, 1);
   cursor: pointer;
 }
-.form-footer img{
+.form-footer img {
   height: 25px;
   width: auto;
 }
