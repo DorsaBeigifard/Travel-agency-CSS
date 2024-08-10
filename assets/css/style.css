@@ -26,7 +26,6 @@
   --white-color: #ffffff;
   --spacing: 1rem;
   --radius: 3px;
-  --load-animation: fadeInFromDown;
 }
 /* -----ROOT----- */
 
@@ -305,9 +304,6 @@ a {
 /* ---------End-Header------------ */
 
 /* ---------About------------ */
-.about-content {
-  animation: var(--load-animation) 1s;
-}
 .about-item {
   padding: 0 1.2rem;
 }
@@ -337,9 +333,6 @@ a {
 /* ---------End-About------------ */
 
 /* ---------Places Content------------ */
-.place{
-  animation: var(--load-animation) 1.5s;
-}
 .about-place {
   background-color: var(--grey-bg);
   padding: var(--spacing) 2.5rem;
@@ -465,10 +458,19 @@ a {
   border-radius: 6px;
   box-shadow: 2px 2px 12px -5px rgba(62, 121, 189, 1);
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.deal-form button:hover {
+  transform: scale(1.1);
 }
 .form-footer img {
   height: 25px;
   width: auto;
+}
+@media only screen and (max-width: 767px) {
+  .form-footer img {
+    height: 15px;
+  }
 }
 /* ---------End-Find Deals------------ */
 
